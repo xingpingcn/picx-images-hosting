@@ -52,7 +52,7 @@ function buidImgFancybox(content, group) {
             const h_divide_w_str = h_divide_w.toString() + '%'; //宽高比
             // 自定义css样式
             const result = `<div class='fancybox' style='position: relative; width: 100%;'>
-            <a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='${url}' data-fancybox='${group}' data-caption='${alt}' style="position: relative;background-color: rgb(204, 204, 204);border-radius: 4px; padding-bottom: ${h_divide_w_str};color:gray;">
+            <a class='fancybox' pjax-fancybox itemscope itemtype="http://schema.org/ImageObject" itemprop="url" href='${url}' data-fancybox='${group}' data-caption='${alt}' style="position: relative;background-color: rgb(204, 204, 204); padding-bottom: ${h_divide_w_str};color:gray;">
             <div style="position: absolute; left: 50%; top: 50%;transform: translate(-50%, -50%);">loading picture...</div>
             ${newItem}
             </a>${buidAlt(imageTags || alt)}</div>`;
