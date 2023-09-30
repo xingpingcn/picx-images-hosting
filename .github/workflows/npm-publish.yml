@@ -21,7 +21,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v1
         with:
-          node-version: "16"
+          node-version: "12.x"
           registry-url: https://registry.npmjs.org/
         
       # 发布 NPM 包
@@ -35,6 +35,8 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: Push
         run: |
+          git add -A
+          git commit -m "Publish"
           git push origin master
     
 
