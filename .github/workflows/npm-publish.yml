@@ -33,6 +33,10 @@ jobs:
           npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
-          
+      - name: Push
+        run: |
+          git add -A
+          git commit -m "Publish"
+          git push origin master
     
 
