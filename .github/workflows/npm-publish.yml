@@ -35,6 +35,7 @@ jobs:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
       - name: Push
         run: |
+          git reset --hard HEAD
           git add -A
           git commit -m "Publish"
           git push origin master
